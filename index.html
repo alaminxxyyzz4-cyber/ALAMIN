@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>কবিতা | রবিউল ইসলাম ইসলাম</title>
+
+    <meta
+        name="description"
+        content="কবি রবিউল ইসলাম ইসলামের কবিতা, কবিতা সংগ্রহ ও কুইজ।"
+    >
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Noto Sans Bengali", "Segoe UI", sans-serif;
+            background: #f7f8fc;
+            color: #202333;
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button,
+        input {
+            font-family: inherit;
+        }
+
+        /* NAVBAR */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid #e7e8ef;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: auto;
+            min-height: 72px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 800;
+            color: #6c4df6;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+            font-weight: 600;
+            color: #414557;
+        }
+
+        .nav-links a:hover {
+            color: #6c4df6;
+        }
+
+        .theme-btn {
+            border: none;
+            background: #f0efff;
+            color: #6c4df6;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+            background:
+                radial-gradient(circle at top left, #e9e3ff, transparent 35%),
+                radial-gradient(circle at bottom right, #dff5ff, transparent 35%),
+                #f7f8fc;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: 7px 16px;
+            border-radius: 30px;
+            background: #ece8ff;
+            color: #6247e8;
+            font-weight: 700;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 78px);
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
+            color: #6c4df6;
+        }
+
+        .hero h2 {
+            font-size: clamp(22px, 4vw, 34px);
+            color: #555b70;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #666b7c;
+            font-size: 18px;
+        }
+
+        .hero-buttons {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            border: none;
+            border-radius: 12px;
+            padding: 13px 23px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 700;
+            transition: 0.25s;
+        }
+
+        .primary-btn {
+            background: #6c4df6;
+            color: white;
+        }
+
+        .primary-btn:hover {
+            transform: translateY(-2px);
+            background: #5939df;
+        }
+
+        .secondary-btn {
+            background: white;
+            color: #444;
+            border: 1px solid #dddfea;
+        }
+
+        .secondary-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* GENERAL */
+
+        .section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 90px 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 42px;
+        }
+
+        .section-header small {
+            color: #6c4df6;
+            font-weight: 800;
+        }
+
+        .section-header h2 {
+            font-size: 38px;
+            margin: 7px 0;
+        }
+
+        .section-header p {
+            color: #73788a;
+        }
+
+        /* STATS */
+
+        .stats {
+            max-width: 1000px;
+            margin: -60px auto 0;
+            padding: 0 20px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .stat {
+            background: white;
+            border: 1px solid #e8e8ef;
+            border-radius: 18px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(30, 25, 80, 0.07);
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 32px;
+            color: #6c4df6;
+        }
+
+        .stat span {
+            color: #777b8d;
+        }
+
+        /* SEARCH */
+
+        .search-box {
+            max-width: 700px;
+            margin: auto;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 17px 20px;
+            border: 1px solid #dddfea;
+            border-radius: 14px;
+            outline: none;
+            font-size: 16px;
+            background: white;
+        }
+
+        .search-box input:focus {
+            border-color: #6c4df6;
+        }
+
+        /* FILTERS */
+
+        .filters {
+            margin: 28px 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 9px 16px;
+            border-radius: 30px;
+            border: 1px solid #dddfea;
+            background: white;
+            cursor: pointer;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: #6c4df6;
+            color: white;
+            border-color: #6c4df6;
+        }
+
+        /* POEMS */
+
+        .poem-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .poem-card {
+            background: white;
+            border: 1px solid #e8e8ef;
+            border-radius: 18px;
+            padding: 25px;
+            transition: 0.3s;
+            box-shadow: 0 8px 25px rgba(30, 25, 80, 0.04);
+        }
+
+        .poem-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(30, 25, 80, 0.10);
+        }
+
+        .poem-category {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: #eeeaff;
+            color: #6849ed;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 13px;
+        }
+
+        .poem-card h3 {
+            font-size: 23px;
+            margin-bottom: 12px;
+        }
+
+        .poem-preview {
+            color: #666b7c;
+            white-space: pre-line;
+            min-height: 115px;
+        }
+
+        .poem-actions {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+        }
+
+        .small-btn {
+            padding: 9px 12px;
+            border: 1px solid #dedfea;
+            background: #fff;
+            border-radius: 9px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .small-btn:hover {
+            background: #f1efff;
+        }
+
+        .favorite.active {
+            color: #e54870;
+        }
+
+        /* ABOUT */
+
+        .about-box {
+            background: white;
+            border: 1px solid #e8e8ef;
+            border-radius: 22px;
+            padding: 45px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .author-icon {
+            width: 180px;
+            height: 180px;
+            margin: auto;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6c4df6, #9a7cff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 60px;
+            font-weight: 800;
+        }
+
+        .about-text h3 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .about-text p {
+            color: #696e80;
+            margin-bottom: 12px;
+        }
+
+        /* QUIZ */
+
+        .quiz-box {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            border: 1px solid #e8e8ef;
+            border-radius: 22px;
+            padding: 35px;
+            box-shadow: 0 15px 40px rgba(30, 25, 80, 0.06);
+        }
+
+        .quiz-question {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        .quiz-options {
+            display: grid;
+            gap: 12px;
+        }
+
+        .quiz-option {
+            border: 1px solid #dddfea;
+            background: white;
+            border-radius: 12px;
+            padding: 13px;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .quiz-option:hover {
+            border-color: #6c4df6;
+            background: #f6f4ff;
+        }
+
+        .quiz-result {
+            margin-top: 20px;
+            font-weight: 700;
+        }
+
+        /* NEWSLETTER */
+
+        .newsletter {
+            background: linear-gradient(135deg, #6c4df6, #8368ff);
+            color: white;
+            border-radius: 25px;
+            padding: 50px 25px;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .newsletter p {
+            opacity: 0.9;
+        }
+
+        .newsletter-form {
+            max-width: 600px;
+            margin: 25px auto 0;
+            display: flex;
+            gap: 10px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+        }
+
+        .newsletter-form button {
+            background: white;
+            color: #6247e8;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #161722;
+            color: #bfc1cc;
+            padding: 45px 20px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-title {
+            color: white;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .copyright {
+            margin-top: 30px;
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid #2d2e3a;
+            font-size: 14px;
+        }
+
+        /* MODAL */
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            z-index: 2000;
+        }
+
+        .modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            max-width: 700px;
+            max-height: 85vh;
+            overflow-y: auto;
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            position: relative;
+        }
+
+        .modal-content h2 {
+            margin-bottom: 20px;
+        }
+
+        .full-poem {
+            white-space: pre-line;
+            color: #555b6c;
+            font-size: 17px;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 15px;
+            top: 12px;
+            border: none;
+            background: #f0f0f4;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        /* DARK MODE */
+
+        body.dark {
+            background: #11121a;
+            color: #eeeeF5;
+        }
+
+        body.dark .navbar,
+        body.dark .stat,
+        body.dark .poem-card,
+        body.dark .about-box,
+        body.dark .quiz-box,
+        body.dark .modal-content {
+            background: #1a1b25;
+            border-color: #2b2d3a;
+        }
+
+        body.dark .nav-links a {
+            color: #ddddea;
+        }
+
+        body.dark .hero {
+            background:
+                radial-gradient(circle at top left, #26204b, transparent 35%),
+                radial-gradient(circle at bottom right, #123044, transparent 35%),
+                #11121a;
+        }
+
+        body.dark .hero p,
+        body.dark .section-header p,
+        body.dark .poem-preview,
+        body.dark .about-text p,
+        body.dark .full-poem {
+            color: #b7b9c8;
+        }
+
+        body.dark .search-box input,
+        body.dark .small-btn,
+        body.dark .filter-btn,
+        body.dark .quiz-option {
+            background: #20212d;
+            color: #eee;
+            border-color: #343646;
+        }
+
+        body.dark .theme-btn {
+            background: #29263e;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+            .poem-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-box {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .nav-links {
+                display: none;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .poem-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: 570px;
+            }
+
+            .section {
+                padding: 65px 18px;
+            }
+
+            .section-header h2 {
+                font-size: 30px;
+            }
+
+            .about-box {
+                padding: 30px 20px;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+
+            .quiz-box {
+                padding: 25px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="#home" class="logo">কবিতা</a>
+
+            <nav class="nav-links">
+                <a href="#home">হোম</a>
+                <a href="#poems">কবিতা</a>
+                <a href="#about">লেখক</a>
+                <a href="#quiz">কুইজ</a>
+                <a href="#contact">যোগাযোগ</a>
+            </nav>
+
+            <button class="theme-btn" id="themeBtn">
+                🌙
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                ✨ কবিতার জগতে স্বাগতম
+            </div>
+
+            <h1>
+                শব্দে শব্দে
+                <span>অনুভূতি</span>
+            </h1>
+
+            <h2>
+                কবি রবিউল ইসলাম ইসলাম
+            </h2>
+
+            <p>
+                কবিতা, অনুভূতি, প্রকৃতি ও জীবনের নানা গল্প—
+                শব্দের মাধ্যমে অনুভব করার একটি সুন্দর সংগ্রহশালা।
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#poems" class="btn primary-btn">
+                    📖 কবিতা পড়ুন
+                </a>
+
+                <a href="#about" class="btn secondary-btn">
+                    ✍️ লেখক সম্পর্কে
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- STATS -->
+
+    <section class="stats">
+
+        <div class="stats-grid">
+
+            <div class="stat">
+                <strong id="poemCount">0</strong>
+                <span>কবিতা</span>
+            </div>
+
+            <div class="stat">
+                <strong>৪</strong>
+                <span>বিষয়ভিত্তিক বিভাগ</span>
+            </div>
+
+            <div class="stat">
+                <strong>∞</strong>
+                <span>অনুভূতির গল্প</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- POEMS -->
+
+    <section class="section" id="poems">
+
+        <div class="section-header">
+
+            <small>POETRY COLLECTION</small>
+
+            <h2>কবিতা সংগ্রহ</h2>
+
+            <p>
+                তোমার পছন্দের কবিতা খুঁজে পড়ো।
+            </p>
+
+        </div>
+
+
+        <div class="search-box">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="🔎 কবিতার নাম বা বিষয় লিখে খুঁজুন..."
+            >
+
+        </div>
+
+
+        <div class="filters">
+
+            <button class="filter-btn active" data-category="all">
+                সব
+            </button>
+
+            <button class="filter-btn" data-category="প্রকৃতি">
+                প্রকৃতি
+            </button>
+
+            <button class="filter-btn" data-category="জীবন">
+                জীবন
+            </button>
+
+            <button class="filter-btn" data-category="অনুভূতি">
+                অনুভূতি
+            </button>
+
+            <button class="filter-btn" data-category="স্বপ্ন">
+                স্বপ্ন
+            </button>
+
+        </div>
+
+
+        <div class="poem-grid" id="poemGrid"></div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="section" id="about">
+
+        <div class="section-header">
+
+            <small>ABOUT THE AUTHOR</small>
+
+            <h2>লেখক পরিচিতি</h2>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <div>
+
+                <div class="author-icon">
+                    র
+                </div>
+
+            </div>
+
+
+            <div class="about-text">
+
+                <h3>রবিউল ইসলাম ইসলাম</h3>
+
+                <p>
+                    কবিতার মাধ্যমে অনুভূতি, প্রকৃতি, জীবন ও স্বপ্নের
+                    বিভিন্ন মুহূর্তকে তুলে ধরার একটি সাহিত্যিক
+                    সংগ্রহশালা এটি।
+                </p>
+
+                <p>
+                    এই Website-এর উদ্দেশ্য হলো পাঠকদের জন্য
+                    কবিতাগুলোকে সুন্দর ও সহজভাবে উপস্থাপন করা।
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUIZ -->
+
+    <section class="section" id="quiz">
+
+        <div class="section-header">
+
+            <small>POETRY QUIZ</small>
+
+            <h2>কবিতা কুইজ 🎯</h2>
+
+            <p>
+                কবিতা সম্পর্কে তোমার জ্ঞান পরীক্ষা করো।
+            </p>
+
+        </div>
+
+
+        <div class="quiz-box">
+
+            <div class="quiz-question" id="quizQuestion">
+                প্রশ্ন লোড হচ্ছে...
+            </div>
+
+            <div class="quiz-options" id="quizOptions"></div>
+
+            <div class="quiz-result" id="quizResult"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- NEWSLETTER -->
+
+    <section class="section" id="contact">
+
+        <div class="newsletter">
+
+            <h2>কবিতার সাথে থাকুন ❤️</h2>
+
+            <p>
+                নতুন কবিতা ও সাহিত্যিক কনটেন্টের খবর পেতে
+                আপনার নাম লিখে রাখুন।
+            </p>
+
+            <form class="newsletter-form" id="newsletterForm">
+
+                <input
+                    type="text"
+                    id="readerName"
+                    placeholder="আপনার নাম"
+                    required
+                >
+
+                <button class="btn" type="submit">
+                    যুক্ত হোন
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <div class="footer-title">
+                    কবিতা
+                </div>
+
+                <p>
+                    কবি রবিউল ইসলাম ইসলামের কবিতা সংগ্রহ।
+                </p>
+            </div>
+
+            <div>
+                <p>📚 কবিতা</p>
+                <p>✍️ লেখক</p>
+                <p>🎯 কুইজ</p>
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+            © 2026 কবিতা | রবিউল ইসলাম ইসলাম
+        </div>
+
+    </footer>
+
+
+    <!-- POEM MODAL -->
+
+    <div class="modal" id="poemModal">
+
+        <div class="modal-content">
+
+            <button class="close-btn" id="closeModal">
+                ×
+            </button>
+
+            <h2 id="modalTitle"></h2>
+
+            <p class="full-poem" id="modalPoem"></p>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        /* POEM DATA */
+
+        const poems = [
+
+            {
+                title: "বৃষ্টির গান",
+                category: "প্রকৃতি",
+                text: `বৃষ্টির ফোঁটায় ভিজে যায় পথ,
+জেগে ওঠে মাটির গন্ধ।
+জানালার পাশে নীরব বিকেল,
+মনে জাগায় কত ছন্দ।
+
+মেঘের আড়ালে সূর্য হাসে,
+আকাশ হয়ে যায় নীল।
+বৃষ্টির দিনে মনটা যেন
+খুঁজে পায় নতুন দিল।`
+            },
+
+            {
+                title: "জীবনের পথ",
+                category: "জীবন",
+                text: `পথ কখনো সহজ নয়,
+তবু থামতে নেই।
+ছোট্ট স্বপ্ন বুকে নিয়ে
+সামনে এগিয়ে যাই।
+
+হোঁচট যদি আসেও পথে,
+শিখতে হবে তার থেকে।
+আজকের ভুল আগামী দিনের
+আলো হবে একদিন।`
+            },
+
+            {
+                title: "নীরব অনুভূতি",
+                category: "অনুভূতি",
+                text: `কিছু কথা বলা হয় না,
+চোখের ভাষায় থাকে।
+কিছু স্মৃতি নীরব হয়ে
+মনের ভেতর ডাকে।
+
+শব্দহীন সেই অনুভূতিগুলো
+কখনো হারায় না,
+সময়ের স্রোত বয়ে গেলেও
+মন তাদের ভোলে না।`
+            },
+
+            {
+                title: "একটি স্বপ্ন",
+                category: "স্বপ্ন",
+                text: `দূর আকাশে একটি তারা,
+আমায় বলে—চলো।
+স্বপ্নগুলো ডানা মেলে
+নতুন পথে চল।
+
+আজ না হলে কাল হবে,
+আলো আসবেই একদিন।
+বিশ্বাস রেখে এগিয়ে গেলে
+বদলে যাবে জীবন।`
+            },
+
+            {
+                title: "সবুজ সকাল",
+                category: "প্রকৃতি",
+                text: `সবুজ পাতায় শিশির হাসে,
+পাখি ডাকে ভোরে।
+সূর্য ওঠে ধীরে ধীরে
+আলোর রঙের ঘোরে।
+
+নতুন দিনের নতুন আশা,
+নতুন কিছু গান।
+প্রকৃতির এই সুন্দর ছোঁয়ায়
+ভরে ওঠে প্রাণ।`
+            },
+
+            {
+                title: "সময়ের গল্প",
+                category: "জীবন",
+                text: `সময় নদীর মতো বয়ে যায়,
+ফিরে আসে না আর।
+তাই তো আজকে বাঁচতে শেখো,
+আজই সবচেয়ে সুন্দর।
+
+গতকাল শুধু স্মৃতি হয়ে
+থাকুক মনের ঘরে।
+আগামীকাল আসবে যখন,
+দেখা যাবে ভোরে।`
+            },
+
+            {
+                title: "মনের আকাশ",
+                category: "অনুভূতি",
+                text: `মনের আকাশ কখনো নীল,
+কখনো মেঘে ঢাকা।
+কখনো আবার রোদ উঠিয়ে
+দেয় নতুনের দেখা।
+
+হাসি-কান্না মিলেই তো জীবন,
+এটাই জীবনের গান।
+অনুভূতিকে আপন করে
+সুন্দর করো প্রাণ।`
+            },
+
+            {
+                title: "আগামীর পথে",
+                category: "স্বপ্ন",
+                text: `আগামীর পথে হাঁটব আমি,
+হাতে থাকবে আলো।
+ভুলগুলোকে শিক্ষা করে
+করব জীবন ভালো।
+
+স্বপ্ন যদি সত্যি হয়,
+চেষ্টা হবে সাথী।
+একদিন সেই স্বপ্নগুলোই
+হবে জীবনের বাতি।`
+            }
+
+        ];
+
+
+        /* ELEMENTS */
+
+        const poemGrid = document.getElementById("poemGrid");
+        const searchInput = document.getElementById("searchInput");
+        const poemCount = document.getElementById("poemCount");
+
+        const modal = document.getElementById("poemModal");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalPoem = document.getElementById("modalPoem");
+        const closeModal = document.getElementById("closeModal");
+
+        let currentCategory = "all";
+
+
+        /* SHOW POEMS */
+
+        function displayPoems() {
+
+            const searchText =
+                searchInput.value.toLowerCase().trim();
+
+            const filtered = poems.filter(poem => {
+
+                const matchesCategory =
+                    currentCategory === "all" ||
+                    poem.category === currentCategory;
+
+                const matchesSearch =
+                    poem.title.toLowerCase().includes(searchText) ||
+                    poem.category.toLowerCase().includes(searchText) ||
+                    poem.text.toLowerCase().includes(searchText);
+
+                return matchesCategory && matchesSearch;
+
+            });
+
+
+            poemGrid.innerHTML = "";
+
+
+            if (filtered.length === 0) {
+
+                poemGrid.innerHTML = `
+                    <div style="
+                        grid-column: 1 / -1;
+                        text-align: center;
+                        padding: 40px;
+                    ">
+                        😔 কোনো কবিতা পাওয়া যায়নি।
+                    </div>
+                `;
+
+                return;
+            }
+
+
+            filtered.forEach((poem, index) => {
+
+                const card = document.createElement("article");
+
+                card.className = "poem-card";
+
+                const saved =
+                    JSON.parse(localStorage.getItem("favoritePoems") || "[]");
+
+                const isFavorite =
+                    saved.includes(poem.title);
+
+
+                card.innerHTML = `
+
+                    <span class="poem-category">
+                        ${poem.category}
+                    </span>
+
+                    <h3>
+                        ${poem.title}
+                    </h3>
+
+                    <p class="poem-preview">
+                        ${poem.text.substring(0, 145)}...
+                    </p>
+
+                    <div class="poem-actions">
+
+                        <button
+                            class="small-btn read-btn"
+                            data-index="${index}"
+                        >
+                            📖 পড়ুন
+                        </button>
+
+                        <button
+                            class="small-btn favorite ${isFavorite ? "active" : ""}"
+                            data-title="${poem.title}"
+                        >
+                            ❤️
+                        </button>
+
+                    </div>
+                `;
+
+
+                poemGrid.appendChild(card);
+
+            });
+
+
+            /* READ BUTTON */
+
+            document.querySelectorAll(".read-btn")
+                .forEach(button => {
+
+                    button.addEventListener("click", function () {
+
+                        const index = Number(this.dataset.index);
+
+                        const poem = filtered[index];
+
+                        modalTitle.textContent = poem.title;
+
+                        modalPoem.textContent = poem.text;
+
+                        modal.classList.add("show");
+
+                    });
+
+                });
+
+
+            /* FAVORITE BUTTON */
+
+            document.querySelectorAll(".favorite")
+                .forEach(button => {
+
+                    button.addEventListener("click", function () {
+
+                        const title = this.dataset.title;
+
+                        let favorites =
+                            JSON.parse(
+                                localStorage.getItem("favoritePoems") || "[]"
+                            );
+
+
+                        if (favorites.includes(title)) {
+
+                            favorites =
+                                favorites.filter(item => item !== title);
+
+                            this.classList.remove("active");
+
+                        } else {
+
+                            favorites.push(title);
+
+                            this.classList.add("active");
+
+                        }
+
+
+                        localStorage.setItem(
+                            "favoritePoems",
+                            JSON.stringify(favorites)
+                        );
+
+                    });
+
+                });
+
+        }
+
+
+        /* COUNT */
+
+        poemCount.textContent = poems.length;
+
+
+        /* SEARCH */
+
+        searchInput.addEventListener(
+            "input",
+            displayPoems
+        );
+
+
+        /* FILTER */
+
+        document.querySelectorAll(".filter-btn")
+            .forEach(button => {
+
+                button.addEventListener("click", function () {
+
+                    document
+                        .querySelectorAll(".filter-btn")
+                        .forEach(btn =>
+                            btn.classList.remove("active")
+                        );
+
+                    this.classList.add("active");
+
+                    currentCategory =
+                        this.dataset.category;
+
+                    displayPoems();
+
+                });
+
+            });
+
+
+        /* MODAL */
+
+        closeModal.addEventListener("click", function () {
+
+            modal.classList.remove("show");
+
+        });
+
+
+        modal.addEventListener("click", function (event) {
+
+            if (event.target === modal) {
+
+                modal.classList.remove("show");
+
+            }
+
+        });
+
+
+        /* DARK MODE */
+
+        const themeBtn =
+            document.getElementById("themeBtn");
+
+
+        themeBtn.addEventListener("click", function () {
+
+            document.body.classList.toggle("dark");
+
+            const dark =
+                document.body.classList.contains("dark");
+
+            this.textContent =
+                dark ? "☀️" : "🌙";
+
+            localStorage.setItem(
+                "poetryDarkMode",
+                dark
+            );
+
+        });
+
+
+        const savedDark =
+            localStorage.getItem("poetryDarkMode") === "true";
+
+
+        if (savedDark) {
+
+            document.body.classList.add("dark");
+
+            themeBtn.textContent = "☀️";
+
+        }
+
+
+        /* QUIZ */
+
+        const quizData = [
+
+            {
+                question:
+                    "কবিতার মূল উদ্দেশ্য কী হতে পারে?",
+
+                options: [
+                    "অনুভূতি প্রকাশ",
+                    "শুধু হিসাব করা",
+                    "শুধু খবর পড়া",
+                    "কেবল ছবি আঁকা"
+                ],
+
+                answer: "অনুভূতি প্রকাশ"
+            },
+
+            {
+                question:
+                    "‘বৃষ্টির গান’ কবিতাটির বিভাগ কী?",
+
+                options: [
+                    "জীবন",
+                    "প্রকৃতি",
+                    "স্বপ্ন",
+                    "ইতিহাস"
+                ],
+
+                answer: "প্রকৃতি"
+            },
+
+            {
+                question:
+                    "‘একটি স্বপ্ন’ কবিতার প্রধান বিষয় কী?",
+
+                options: [
+                    "স্বপ্ন ও চেষ্টা",
+                    "খেলা",
+                    "রান্না",
+                    "ভ্রমণ"
+                ],
+
+                answer: "স্বপ্ন ও চেষ্টা"
+            }
+
+        ];
+
+
+        let quizIndex = 0;
+        let score = 0;
+
+
+        function loadQuiz() {
+
+            if (quizIndex >= quizData.length) {
+
+                document.getElementById("quizQuestion")
+                    .textContent =
+                    `🎉 কুইজ শেষ! তোমার স্কোর: ${score}/${quizData.length}`;
+
+                document.getElementById("quizOptions")
+                    .innerHTML = "";
+
+                return;
+            }
+
+
+            const quiz = quizData[quizIndex];
+
+            document.getElementById("quizQuestion")
+                .textContent =
+                `${quizIndex + 1}. ${quiz.question}`;
+
+
+            const options =
+                document.getElementById("quizOptions");
+
+            options.innerHTML = "";
+
+            document.getElementById("quizResult")
+                .textContent = "";
+
+
+            quiz.options.forEach(option => {
+
+                const button =
+                    document.createElement("button");
+
+                button.className = "quiz-option";
+
+                button.textContent = option;
+
+
+                button.addEventListener("click", function () {
+
+                    if (option === quiz.answer) {
+
+                        score++;
+
+                        document.getElementById("quizResult")
+                            .textContent =
+                            "✅ সঠিক উত্তর!";
+
+                    } else {
+
+                        document.getElementById("quizResult")
+                            .textContent =
+                            `❌ সঠিক উত্তর: ${quiz.answer}`;
+
+                    }
+
+
+                    setTimeout(() => {
+
+                        quizIndex++;
+
+                        loadQuiz();
+
+                    }, 900);
+
+                });
+
+
+                options.appendChild(button);
+
+            });
+
+        }
+
+
+        /* NEWSLETTER */
+
+        document.getElementById("newsletterForm")
+            .addEventListener("submit", function (event) {
+
+                event.preventDefault();
+
+                const name =
+                    document.getElementById("readerName").value.trim();
+
+                if (name) {
+
+                    alert(
+                        `ধন্যবাদ ${name}! ❤️ কবিতার সাথে থাকার জন্য।`
+                    );
+
+                    this.reset();
+
+                }
+
+            });
+
+
+        /* INITIAL LOAD */
+
+        displayPoems();
+
+        loadQuiz();
+
+    </script>
+
+</body>
+</html>
